@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+*,*::before,*::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Lato, sans-serif;
+    position: relative;
+}
+
+#navbar{
+    position: fixed;
+    background: #BE3144;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 2px solid #333333;
+    color: #fff;
+    z-index: 1000;
+}
+#navbar ul{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1.5rem;
+}
+#navbar ul li{
+    list-style: none;
+}
+.nav-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0 1.2rem;
+}
+.nav-link:hover{
+    color: #333333;
+}
+#About{
+    width:100%;
+    height:100vh;
+    position: relative;
+    background-color: rgba(39, 36, 36, 0.8);
+}
+
+.bg-img{
+    width:100%;
+    height: 100%;
+    display:block;
+    opacity: 0.9;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.welcome-content{
+    display: flex;
+    height: 100vh;
+    color: #fff;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.welcome-txt h1{
+    font-family: 'Raleway', 'Sans-serif';
+    font-size: 4rem;
+    font-weight: 900;
+}
+.welcome-txt p{
+    font-family: 'Poppins', 'Sans-serif';
+    font-size: 2rem;
+    color: #BE3144;
+}
+.profile-img img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    padding-right: 10px;
+}
+
+#Projects{
+    width: 100%;
+    background-color: #45567D;
+    padding: 20px;
+    color: #f3f3f3;
+    text-align: center;
+}
+.section-heading{
+    font-family: 'Poppins', sans-serif;
+    max-width: 640px;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #f3f3f3;
+    margin: 0 auto;
+    padding: 5rem 5px 0;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    
+}
+
+.project{
+    margin-top: 20px;
+    background: #303841;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    box-shadow: 3px 3px 5px 2px #888888;
+    text-align: center;
+    text-decoration: none;
+    color: #f3f3f3;
+    font-size: 14px;
+}
+.code{
+    opacity: 0;
+}
+.project:hover .code{
+    opacity: 1;
+    color: #ff7f50;
+    transition: all 0.4s ease-out ;
+}
+.project:hover{
+    text-decoration: none;
+}
+
+.project-image{
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+.project-title{
+    color: #f3f3f3;
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+    font-size: 1.2rem;
+}
+.btn-view-all{
+    font-size: 1.3rem;
+    padding: 1.2rem 3rem;
+    color: #f3f3f3;
+    text-decoration: none;
+    background: #303841;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+.btn-view-all:hover{
+    text-decoration: none;
+    color: #f3f3f3;
+    background: #BE3144;
+    transition: background 0.4s ease-out ;
+}
+.btn-view-all:hover > i{
+    transform: translateX(0);
+}
+.btn-view-all > i{
+    margin-left: 5px;
+    transform: translateX(2px);
+    transition: transform 0.4s ease-out;
+}
+#Contact{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: #303841;
+    color:#f3f3f3;
+    border-bottom: 10px solid #BE3144;
+}
+#Contact h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 5rem;
+}
+#Contact p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+#Contact ul{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+#Contact ul li:hover{
+    transform: translateY(0);
+}
+#Contact ul li{
+    list-style: none;
+    padding: 0 10px;
+    transform: translateY(3px);
+    transition: transform 0.4s ease-out;
+}
+
+#Contact ul li a{
+    text-decoration: none;
+    color: #f3f3f3;
+}
+footer{
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f3f3f3;
+    background: #303841;
+}
+
+@media screen and (max-width: 980px){
+    #navbar{
+        padding: 10px;
+    }
+    #navbar ul{
+        justify-content: center;
+        margin-right: 0;
+    }
+    .welcome-content{
+        flex-direction: column;
+        padding-top: 50px;;
+    }
+    .profile-img img{
+        width: 250px;
+        height: 250px;
+    }
+    .welcome-txt h1{
+        font-size: 2rem;
+    }
+    .welcome-txt p{
+        font-size: 1.2rem;
+    }
+    #Projects{
+        padding: 10px;
+    }
+    .section-heading{
+        font-size: 1.2rem;
+        padding: 2rem 2px 0;
+        font-weight: 400;
+    }
+    .cards{
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #Contact{
+        height: 80vh;
+        padding: 10px;
+    }
+    #Contact h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    #Contact p{
+        font-size: 1.3rem;
+    }
+    #Contact ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: start;
+    }
+    #Contact ul li{
+        padding: 5px 0;
+    }
+    footer{
+        height: 10vh;
+    }
+    footer p{
+        font-size: 14px;
+    }
+}
